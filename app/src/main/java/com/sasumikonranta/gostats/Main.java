@@ -1,11 +1,3 @@
-package com.sasumikonranta.gostats;
-
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
-
 
 /* Comments::
     TODO:
@@ -49,8 +41,37 @@ Arvoja kaikilla muuttujilla on:
 
 
 */
+package com.sasumikonranta.gostats;
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.*;
+import android.media.MediaPlayer;
+import java.sql.SQLOutput;
+import java.util.*;
+import java.lang.*;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.widget.Button;
+
+
+
+
+//MAIN ACTIVITY ON ID LOGIN
+
 
 public class Main extends ActionBarActivity {
+
+
+
+    EditText idKentta;
+    Button submitNappi, apuNappi;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +79,51 @@ public class Main extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
+        //Määritetään id input kenttä
+
+        idKentta = (EditText) findViewById(R.id.idInput);
+
+
+
+        //Määritetään submitnappi ja asetetaan sille kuuntelija
+        submitNappi = (Button) findViewById(R.id.etuNappi);
+        submitNappi.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+
+                // tänne submit napin painalluksen toiminta
+
+
+
+                try {
+                    id = idKentta.getText().toString();
+
+                    System.out.println("Testitulostus ----- syötetty id: " + id);
+
+                }catch(Exception e){
+
+                    System.out.println("Error");
+                }
+            }
+            });
+
+
+
+        //Määritetään HELP -nappi ja asetetaan sille kuuntelija
+        apuNappi = (Button) findViewById(R.id.helpNappi);
+        apuNappi.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+
+                // tänne apunapin painalluksen toiminta
+                //eli popup käynnistäjä ohjeelle
+
+
+                naytaApu();
+
+
+            }
+        });
 
 
 
@@ -65,6 +131,26 @@ public class Main extends ActionBarActivity {
 
 
     }
+
+
+    private void naytaApu() {
+
+        AlertDialog.Builder helpBuilder = new AlertDialog.Builder(this);
+        helpBuilder.setTitle("Ohje Steam ID:n löytämiseen");
+        helpBuilder.setMessage("Tämä ohje neuvoo kuinka löydät oman Steam ID:si ! (JOSKUS KUN JAKSAA TEHDÄ) TODO");
+        helpBuilder.setPositiveButton("Poistu",
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do nothing but close the dialog
+                    }
+                });
+
+        // Remember, create doesn't show the dialog
+        AlertDialog helpDialog = helpBuilder.create();
+        helpDialog.show();
+    }
+
 
 
     @Override
