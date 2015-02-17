@@ -8,13 +8,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <android:uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
+
 
     <application
         android:name=".Global"
@@ -33,15 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Tulos"
-            android:label="@string/title_activity_tulos"
-            android:theme="@android:style/Theme.Holo" >
-        </activity>
-        <activity
-            android:name=".Tulostab"
-            android:label="@string/title_activity_tulostab" >
-        </activity>
+
     </application>
 
 </manifest>
