@@ -53,7 +53,32 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.app.ActionBar;
+import android.media.Image;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.view.View.OnClickListener;
+import android.widget.*;
+import android.media.MediaPlayer;
+import java.util.*;
+import java.math.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.*;
+import java.io.File;
+import java.lang.*;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 
 
@@ -73,6 +98,9 @@ public class Main extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //piilotetaan menubar
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         //Määritetään id input kenttä
         idKentta = (EditText) findViewById(R.id.idInput);
@@ -89,10 +117,14 @@ public class Main extends ActionBarActivity {
 
 
 
+                // tänne submit napin painalluksen toiminta
                 try {
                     id = idKentta.getText().toString();
 
                     System.out.println("Testitulostus ----- syötetty id: " + id);
+
+                    //tää siirtää activityn toiseen
+               //     startActivity(new Intent(Main.this, Tulostab.class));
 
                 }catch(Exception e){
 

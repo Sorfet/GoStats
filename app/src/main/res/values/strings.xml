@@ -1,8 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GoStats</string>
 
+    <string name="app_name">GoStats</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="help">H</string>
+    <string name="help">\?</string>
     <string name="submit">SUBMIT</string>
+    <string name="title_activity_tulos">Tulos</string>
+    <string name="title_activity_tulostab">Tulostab</string>
+    <string name="title_section1">Overall</string>
+    <string name="title_section2">Competive</string>
+    <string name="title_section3">Casual</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
