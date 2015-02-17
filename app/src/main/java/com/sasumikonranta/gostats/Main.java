@@ -85,7 +85,7 @@ public class Main extends ActionBarActivity {
 
             public void onClick(View v) {
 
-                // tänne submit napin painalluksen toiminta
+                Parse p = new Parse();
 
 
 
@@ -98,6 +98,7 @@ public class Main extends ActionBarActivity {
 
                     System.out.println("Error");
                 }
+                p.parseWeb(id);
             }
             });
 
@@ -168,4 +169,5 @@ public class Main extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
