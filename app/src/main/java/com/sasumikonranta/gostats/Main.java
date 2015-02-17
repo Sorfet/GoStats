@@ -69,9 +69,9 @@ public class Main extends ActionBarActivity {
 
 
 
-    EditText idKentta;
-    Button submitNappi, apuNappi;
-    String id;
+    private EditText idKentta;
+    private Button submitNappi, apuNappi;
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +80,6 @@ public class Main extends ActionBarActivity {
 
 
         //Määritetään id input kenttä
-
         idKentta = (EditText) findViewById(R.id.idInput);
 
 
