@@ -4,7 +4,7 @@ package com.sasumikonranta.gostats;
  * Created by Saz on 15.2.2015.
  */
 
-import android.app.*;
+import android.app.Application;
 
 public class Global extends Application{
 
