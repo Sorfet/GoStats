@@ -1,6 +1,7 @@
 
 /* Comments::
     TODO:
+    Andrea testas toimiiko
 
 - Parseeja
   - Data saadaan tästä: http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=<<KEY>>&steamid=<<PROFILEID>>
@@ -43,21 +44,15 @@ Arvoja kaikilla muuttujilla on:
 */
 package com.sasumikonranta.gostats;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.*;
-import android.media.MediaPlayer;
-import java.sql.SQLOutput;
-import java.util.*;
-import java.lang.*;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 
