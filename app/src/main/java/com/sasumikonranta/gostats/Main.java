@@ -124,7 +124,7 @@ public class Main extends ActionBarActivity {
                     System.out.println("Testitulostus ----- syötetty id: " + id);
 
                     //tää siirtää activityn toiseen
-               //     startActivity(new Intent(Main.this, Tulostab.class));
+                 startActivity(new Intent(Main.this, Tulos.class));
 
                 }catch(Exception e){
 
